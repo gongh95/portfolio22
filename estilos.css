@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --main-clr: #181818;
     --second-clr: #202020;
@@ -23,20 +25,24 @@ body {
 /* HEADER */
 
 #header {
+    position: fixed;
     width: 100%;
+    top: 0;
     height: 3.3em;
     background-color: var(--second-clr);
     border-bottom: 3px ridge var(--blue-clr);
+    z-index: 10;
 }
 
 /* LOGO */
 
-#header .logo {
+#header .logo a {
     position: absolute;
     padding: .45em;
     color: var(--blue-clr);
     font-weight: 500;
     font-size: 1.5em;
+    text-decoration: none;
 }
 
 /* NAV */ 
@@ -70,12 +76,32 @@ body {
     top: 0px;
     transform: skewX(31deg);
 }
-#header #nav .ul-container ul {
-    transition: all 1s;
+#header #nav .ul-container {
+    transition: all .5s;
+    opacity: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    background-color: var(--blue-clr);
     position: absolute;
-    margin-top: .2em;
+    top: 3.1em;
+    z-index: 10;
+    right: 100%;
+}
+
+#header #nav .abierto {
+    opacity: 1;
+    right: 0;
+}
+#header #nav .ul-container ul {
+    display: flex;
+    flex-flow: column nowrap;
+    opacity: 1;
+    /* transition: all 1s; */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* right: 100%; */
+    margin-top: 0.2em;
 }
 li {
     padding: 0;
@@ -83,7 +109,9 @@ li {
 }
 #header #nav .ul-container ul li > a {
     text-decoration: none;
-    color: var(--contrast-clr)
+    color: var(--contrast-clr);
+    font-size: 1.7em;
+    padding: .6em 1.6em;
 }
 
 /* BTN-NAV */
@@ -93,19 +121,47 @@ li {
     height: 50px;
     position: absolute;
     right: 5px;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 #header #nav .btn-nav-container .btn-nav {
-    color: #8367e9;
+    width: 50px;
+    height: 50px;
 }
 #header #nav .btn-nav-container .btn-nav .btn-disenio {
-    color: #8367e9;
+    transition: all .5s;
+    width: 50px;
+    height: 50px;
+}
+#header #nav .btn-nav-container .btn-nav .btn-disenio .capa1 {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+#header #nav .btn-nav-container .btn-nav .btn-disenio .capa2 {
+    position: absolute;
+    top: 23px;
+    left: 14px;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+#header #nav .btn-nav-container .btn-nav .btn-disenio .capa3 {
+    position: absolute;
+    top: 33px;
+    left: 14px;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
 }
 
 /* MAIN */
 
 #main {
+    margin-top: 3.7em;
     width: 100%;
     height: auto;
 }

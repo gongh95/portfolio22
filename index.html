@@ -13,20 +13,24 @@
 <body>
     
     <header id="header">
-        <div class="logo">Logo</div>
+        <div class="logo"><a href="#">Logo</a></div>
         <nav id="nav">
             <div class="nav-division"></div>
-            <div id="btn-nav-container" class="btn-nav-container">
+            <div onclick=cambiarMenuToggle() id="btn-nav-container" class="btn-nav-container">
                 <div class="btn-nav">
-                    <div class="btn-disenio"></div>
+                    <div class="btn-disenio">
+                        <div class="capa1"></div>
+                        <div class="capa2"></div>
+                        <div class="capa3"></div>
+                    </div>
                 </div>
             </div>
             <div class="ul-container">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a onclick=esconderAlApretarLink() href="#">Home</a></li>
+                    <li><a onclick=esconderAlApretarLink() href="#about-me">About me</a></li>
+                    <li><a onclick=esconderAlApretarLink() href="#">Projects</a></li>
+                    <li><a onclick=esconderAlApretarLink() href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,16 +43,6 @@
             <div class="container-img"><img src="./assets/img/imagen.jpg" alt="Developer ilustration"></div>
             <p><span>¡Hola!</span>
                 soy Gonzalo... Desarrollador Web
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni mollitia explicabo dicta quae enim. Nobis quaerat, sed obcaecati pariatur dignissimos porro aliquam, rerum quas fuga est autem suscipit, eveniet blanditiis?
-                Tenetur, odio, delectus sequi reprehenderit facere incidunt ducimus, maxime maiores voluptatibus impedit animi eius at autem aspernatur iste architecto fugiat cumque. Nemo quis quod odit iusto labore animi tenetur earum.
-                Doloremque, facilis ipsum. Facilis amet dolores ratione molestiae omnis itaque quam aspernatur natus autem! Earum sapiente illo accusantium porro odio nobis inventore, totam veritatis similique placeat, aliquid libero vel quibusdam.
-                Error voluptas itaque quasi dolores fugit, nihil est illo soluta, beatae asperiores porro corrupti. Consectetur, recusandae earum, quae expedita tenetur nisi sapiente nobis harum sequi fugit, quis veritatis similique blanditiis.
-                Quaerat quisquam libero odio, commodi blanditiis cum voluptate atque nisi reprehenderit aperiam ad. Beatae, cupiditate similique laborum voluptate minus recusandae ratione provident quidem velit cum nobis delectus laudantium ad modi?
-                Labore enim molestias mollitia rem. Numquam, voluptas veritatis quas ex, autem architecto, molestiae eligendi ut nisi necessitatibus facilis perferendis ea quasi temporibus in illo eius voluptatibus provident inventore. Ab, eligendi.
-                Modi consequuntur, eligendi, neque saepe est doloribus explicabo similique labore quaerat soluta vitae aperiam unde maxime dolores? Numquam ut quam maiores doloremque minima ullam recusandae quasi, fugit amet quidem voluptatem!
-                Quos harum atque ducimus voluptates ratione nihil at vero asperiores explicabo pariatur! Mollitia labore, aperiam voluptatibus iure facilis soluta quod quam neque dolorem a commodi aut in quos suscipit nostrum.
-                Repellendus quam voluptatum accusantium sapiente amet enim nam animi quos ratione quisquam nihil, hic delectus totam architecto, minima dolore aliquam in sint necessitatibus aliquid quaerat facere. Temporibus blanditiis culpa sed.
-                Quia molestiae iste quae vitae quisquam suscipit necessitatibus, vero obcaecati deserunt nesciunt assumenda exercitationem veritatis consectetur vel quis, ipsum ut. Voluptatibus sequi odio possimus velit quam accusantium, cupiditate ut voluptas?
             </p>
             <div class="container-img second">
                 <div class="forma"></div>
@@ -62,7 +56,7 @@
             </div>
             <span>DESLIZAR</span>
         </div>
-        <div class="cont container-habilidades">
+        <div id="about-me" class="cont container-habilidades">
             <h3>HABILIDADES</h3>
             <div class="habilidades">
                 <svg class="html" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
@@ -186,7 +180,7 @@
             Minus nobis hic molestiae magnam laudantium autem quae, similique maxime quam. Exercitationem officia iste suscipit labore excepturi quia optio repellat? Maxime amet debitis minus quisquam repudiandae, eligendi dolore dolor esse!</span>-->
         </div>
     </main>
-    <div class="contact-form">
+    <div id="contact" class="contact-form">
         <div class="cont container-form">
             <h3>CONTACTAME</h3>
         </div>
