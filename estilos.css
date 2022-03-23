@@ -85,12 +85,13 @@ body {
     position: absolute;
     top: 3.1em;
     z-index: 10;
-    right: 100%;
+    margin-left: 100%;
+    clip-path: polygon(100% 0, 0 0, 0 56%, 100% 100%);
 }
 
 #header #nav .abierto {
     opacity: 1;
-    right: 0;
+    margin-left: 0;
 }
 #header #nav .ul-container ul {
     display: flex;
@@ -176,6 +177,15 @@ li {
     border: 1px solid var(--dark-blue-clr);
     box-shadow: inset 0px 0px 7px 2px var(--dark-blue-clr), 0px 0px 14px 1px var(--dark-blue-clr);
 }
+#main .github-flotante {
+    display: none;
+}
+#main .fondo-github-flotante {
+    display: none;
+}
+#main .github-text-profile {
+    display: none;
+}
 #main .container-welcome {
     width: 100%;
     /* max-width: 1100px; */
@@ -183,6 +193,9 @@ li {
     /* padding: 20px; */
     /* margin: 0 auto; */
     
+}
+#main .container-welcome > img {
+    display: none;
 }
 #main .container-welcome .container-img {
     float: right;
@@ -207,6 +220,13 @@ li {
     width: 150px;
     background-color: var(--blue-clr);
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+#main .container-welcome .second .forma a > img {
+    width: 77px;
+    height: auto;
+    position: absolute;
+    right: 4px;
+    top: 17px;
 }
 h3 {
     font: 1.5em;
@@ -244,9 +264,11 @@ p {
     margin: 0 auto;
     text-align: center;
     bottom: 20px;
+    filter: drop-shadow(2px 2px 7px rgb(26, 14, 36));
 }
 #main .scroll-mobile-container > span {
     color: #ffffff;
+    font-size: 1.5em;
 }
 #main .scroll-mobile-container .icon-container {
     width: 103px;
@@ -257,7 +279,7 @@ p {
     width: 40px;
     height: 6px;
     background-color: #fff;
-    transform: rotate(317deg) translate(22px, 2px);
+    transform: scale(1.5) rotate(317deg) translate(22px, -9px);
 }
 #main .scroll-mobile-container .icon-container .icon::before {
     content: '';
@@ -284,4 +306,105 @@ p {
 #main .container-habilidades .habilidades > svg {
     width: 55px;
     height: auto;
+}
+
+
+/* MEDIA QUERYS */
+
+@media screen and (min-width: 510px) {
+    .texto2 {
+        margin-left:0;
+    }
+}
+@media screen and (min-width: 730px) {
+    #header #nav .btn-nav-container {
+        display: none;
+    }
+    #header #nav .ul-container {
+        margin-left: 0;
+        width: 100%;
+        height: 3em;
+        background-color: transparent;
+        top: 0;
+        opacity: 1;
+        clip-path: none;
+    }
+    #header #nav .ul-container ul {
+        justify-content: end;
+        flex-flow: row nowrap;
+        width: 100%;
+        height: 3em;
+        position: absolute;
+        right: 0;
+        margin-top: 0;
+    }
+    #header #nav .ul-container ul li > a {
+        padding: 0.4em 0.5em;
+    }
+    #header #nav .nav-division {
+        width: 494px;
+    }
+    #main .container-welcome .second {
+        left: 5px;
+        top: 77px;
+    }
+    #main .container-welcome .second .forma a > img {
+        right: 34px;
+        top: 20px;
+    }
+    #main .scroll-mobile-container {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    #main .container-welcome > img {
+        display: block;
+        width: 200px;
+        height: auto;
+        position: absolute;
+        top: 54px;
+        right: 10px;
+    }
+    #main .container-welcome .second {
+        left: 3%;
+        top: 270px;
+    }
+    #main .github-flotante {
+        position: absolute;
+        top: 4em;
+        left: 1em;
+        display: block;
+        width: 140px;
+        height: auto;
+    }
+    #main .github-flotante a > img {
+        transition: all .5s;
+        width: 100%;
+        border-radius: 50%;
+    }
+    #main .github-flotante a > img:hover {
+        transform: scale(1.12) translate(20px, 10px);
+    }
+    #main .fondo-github-flotante {
+        display: block;
+        position: absolute;
+        width: 186px;
+        height: 202px;
+        background-color: var(--dark-blue-clr);
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        top: 3em;
+    }
+    #main .github-text-profile {
+        position: absolute;
+        color: var(--contrast-clr);
+        top: 222px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .cont {
+        max-width: 601px;
+    }
 }
