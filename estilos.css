@@ -16,6 +16,8 @@ html {
     --letter-clr: #d1c6c1;
 }
 
+
+
 body {
     font-size: 16px;
     /* background-color: var(--main-clr); */
@@ -25,6 +27,7 @@ body {
 /* HEADER */
 
 #header {
+    font-family: 'Bebas Neue', cursive;
     position: fixed;
     width: 100%;
     top: 0;
@@ -101,7 +104,7 @@ body {
     width: 100%;
     height: 100vh;
     position: absolute;
-    /* right: 100%; */
+    right: 0;
     margin-top: 0.2em;
 }
 li {
@@ -167,6 +170,7 @@ li {
     height: auto;
 }
 .cont {
+    font-family: 'Raleway', sans-serif;
     margin: .5em auto 1em auto;
     padding: 20px;
     /* background: var(--third-clr); */
@@ -174,6 +178,16 @@ li {
     width: 100%;
     max-width: 400px;
     min-width: 320px;
+    border: 1px solid var(--dark-blue-clr);
+    box-shadow: inset 0px 0px 7px 2px var(--dark-blue-clr), 0px 0px 14px 1px var(--dark-blue-clr);
+}
+.cont-footer {
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+    padding: 20px;
+    background: var(--blue-clr); 
+    width: 100%;
+    height: 250px;
     border: 1px solid var(--dark-blue-clr);
     box-shadow: inset 0px 0px 7px 2px var(--dark-blue-clr), 0px 0px 14px 1px var(--dark-blue-clr);
 }
@@ -206,7 +220,7 @@ li {
 }
 #main .container-welcome .container-img > img {
     width: 150px;
-    height: 105px;
+    height: 115px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 #main .container-welcome .second {
@@ -234,7 +248,7 @@ h3 {
     margin-bottom: 1em;
 }
 p {
-    font-size: 1.2em;
+    font-size: 1.10em;
     color: var(--letter-clr);
     font-weight: 500;
     margin-bottom: 1.3em;
@@ -300,6 +314,7 @@ p {
 }
 #main .container-habilidades .habilidades {
     display: flex;
+    justify-content: space-evenly;
     gap: .5em;
     flex-wrap: nowrap;
 }
@@ -335,7 +350,7 @@ p {
         width: 100%;
         height: 3em;
         position: absolute;
-        right: 0;
+        right: 20px;
         margin-top: 0;
     }
     #header #nav .ul-container ul li > a {
@@ -395,6 +410,7 @@ p {
         top: 3em;
     }
     #main .github-text-profile {
+        font-size: 16px;
         position: absolute;
         color: var(--contrast-clr);
         top: 222px;
@@ -406,5 +422,38 @@ p {
 @media screen and (min-width: 1000px) {
     .cont {
         max-width: 601px;
+    }
+    body {
+        font-size: 20px;
+    }
+    #header #nav .nav-division::before {
+        height: 63px;
+    }
+    #header #nav .nav-division {
+        width: 610px;
+    }
+    #header #nav .ul-container ul li > a {
+        font-size: 1.6em;
+    }
+    #main .container-welcome > img {
+        top: 74px;
+    }
+    .cont {
+        max-width: 59%;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    #main .github-text-profile {
+        top: 237px;
+    }
+    #main .container-welcome .second {
+        top: 290px;
+    }
+    #main .container-welcome .second .forma {
+        transition: all .2s;
+    }
+    #main .container-welcome .second .forma:hover {
+        transform: scale(1.1);
     }
 }
