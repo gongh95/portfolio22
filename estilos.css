@@ -171,7 +171,7 @@ li {
 }
 .cont {
     font-family: 'Raleway', sans-serif;
-    margin: .5em auto 1em auto;
+    margin: .5em auto .1em auto;
     padding: 1.2em;
     /* background: var(--third-clr); */
     /* background: linear-gradient(180deg, var(--third-clr) 63%, transparent); */
@@ -206,6 +206,7 @@ li {
     height: auto;
     /* padding: 20px; */
     /* margin: 0 auto; */
+    padding-bottom: 0.1em;
     
 }
 #main .container-welcome > img {
@@ -253,6 +254,12 @@ p {
     color: var(--letter-clr);
     font-weight: 500;
     margin-bottom: 1.3em;
+}
+.subtitulo {
+    font-weight: 800;
+    border-top: 1px solid;
+    padding-top: 0.3em;
+    color: #d2691e;
 }
 .texto2 {
     margin-left: 3.7em;
