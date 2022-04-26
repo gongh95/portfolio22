@@ -24,6 +24,25 @@ body {
     /* background: linear-gradient(175deg, var(--main-clr), #241a1c); */
 }
 
+/* SLIDER */
+
+.contenedor-slider {
+    overflow-x: hidden;
+}
+
+#main #about-me .slider-automatico {
+    animation: sliderAutomatico 100s infinite;
+}
+
+@keyframes sliderAutomatico {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
 /* HEADER */
 
 #header {
