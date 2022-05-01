@@ -165,6 +165,10 @@ li {
     width: 25px;
     height: 3px;
     background-color: #fff;
+    transition: all .3s;
+}
+#header #nav .cerrar .btn-nav .btn-disenio .capa1 {
+    transform: rotate(135deg) translate(7px, -7px);
 }
 #header #nav .btn-nav-container .btn-nav .btn-disenio .capa2 {
     position: absolute;
@@ -173,6 +177,10 @@ li {
     width: 25px;
     height: 3px;
     background-color: #fff;
+    transition: all .3s;
+}
+#header #nav .cerrar .btn-nav .btn-disenio .capa2 {
+    transform: rotate(45deg);
 }
 #header #nav .btn-nav-container .btn-nav .btn-disenio .capa3 {
     position: absolute;
@@ -181,6 +189,10 @@ li {
     width: 25px;
     height: 3px;
     background-color: #fff;
+    transition: all .4s ease-out;
+}
+#header #nav .cerrar .btn-nav .btn-disenio .capa3 {
+    transform: scale(0);
 }
 
 /* MAIN */
@@ -370,9 +382,9 @@ p {
 
 /* PROYECTOS-SECTION */ 
 
-#main .container-projects {
+/*#main .container-projects {
 
-}
+}*/
 
 #main .container-projects .project-container {
     display: flex;
